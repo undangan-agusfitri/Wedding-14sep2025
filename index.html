@@ -50,7 +50,7 @@
     .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
     @media (max-width: 860px){
       .grid-2{grid-template-columns:1fr;}
-      h1.names{font-size:48px; animation: fadeInOut 3s infinite}
+      h1.names{font-size:48px; animation: fadeInOut 3s infinite;}
     }
 
     .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(20,108,67,.35),transparent);margin:22px 0}
@@ -80,6 +80,11 @@
     @keyframes zoomIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     @keyframes fadeUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
+    @keyframes fadeInOut {
+      0%   { opacity: 0; }   /* Awal transparan */
+      50%  { opacity: 1; }   /* Muncul */
+      100% { opacity: 0; }   /* Hilang lagi */
+    }
     .invitation-title { font-size: 2rem; font-weight: 600; color: #1b5e20; animation: slideIn 2s ease-out; }
     .bride-groom { font-size: 2.5rem; font-weight: bold; color: #2e7d32; animation: fadeIn 3s ease-in-out, zoomIn 2s ease-in-out; }
     .date { font-size: 0.5rem; font-weight: 100; animation: fadeIn 3s ease-in-out; }
